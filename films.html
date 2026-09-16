@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Films — Nom Prénom Studio</title>
+  <meta name="description" content="Films, clips, publicités et courts-métrages.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Films — Nom Prénom Studio">
+  <meta property="og:description" content="Films, clips, publicités et courts-métrages.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Films — Nom Prénom Studio">
+  <meta name="twitter:description" content="Films, clips, publicités et courts-métrages.">
+  <!--
+    À ACTIVER une fois le nom de domaine définitif connu :
+    <link rel="canonical" href="https://votre-domaine.com/films.html">
+    <meta property="og:url" content="https://votre-domaine.com/films.html">
+    <meta property="og:image" content="https://votre-domaine.com/images/og-cover.jpg"> (1200×630px)
+  -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231C1714'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia, serif' fill='%23E9E3D9' text-anchor='middle'%3ENP%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@200;300;400&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-wordmark">
+    <a href="index.html">Nom Prénom<sup>studio</sup></a>
+  </div>
+  <div class="nav-links">
+    <a class="nav-link active" href="films.html">films</a>
+    <a class="nav-link" href="photos.html">photos</a>
+    <a class="nav-link" href="contact.html">contact</a>
+  </div>
+  <div class="nav-status">disponible — sept. 2026</div>
+</nav>
+
+<main role="main" aria-label="Films">
+
+  <div class="films-header">
+    <div>
+      <h1 class="films-title">Films</h1>
+      <p class="films-subtitle">Clips · court-métrages · publicités · documentaires</p>
+    </div>
+    <div class="films-filter" role="group" aria-label="Filtrer par type">
+      <button class="filter-btn active" onclick="filterFilms('tous', this)">tous</button>
+      <button class="filter-btn" onclick="filterFilms('clip', this)">clips</button>
+      <button class="filter-btn" onclick="filterFilms('fiction', this)">fiction</button>
+      <button class="filter-btn" onclick="filterFilms('pub', this)">publicité</button>
+      <button class="filter-btn" onclick="filterFilms('doc', this)">documentaire</button>
+    </div>
+  </div>
+
+  <div class="films-grid" id="films-grid">
+
+    <article class="film-card" data-type="clip">
+      <a href="projet.html?id=projet-1">
+        <div class="film-thumb">
+          <!--<img src="images/film-1.jpg" alt="Les heures silencieuses">-->
+          <div class="film-thumb-ph"><div class="film-thumb-ph-bg film-thumb-ph-bg-a"></div></div>
+        </div>
+        <div class="film-info">
+          <div class="film-info-left">
+            <h2 class="film-info-title">Les heures silencieuses</h2>
+            <p class="film-info-meta">2025 · 4 min 12 s</p>
+          </div>
+          <span class="film-info-type">clip officiel</span>
+        </div>
+      </a>
+    </article>
+
+    <article class="film-card" data-type="doc">
+      <a href="projet.html?id=projet-2">
+        <div class="film-thumb">
+          <!--<img src="images/film-2.jpg" alt="Fragments du quotidien">-->
+          <div class="film-thumb-ph"><div class="film-thumb-ph-bg film-thumb-ph-bg-b"></div></div>
+        </div>
+        <div class="film-info">
+          <div class="film-info-left">
+            <h2 class="film-info-title">Fragments du quotidien</h2>
+            <p class="film-info-meta">2025 · 18 min</p>
+          </div>
+          <span class="film-info-type">court-métrage doc.</span>
+        </div>
+      </a>
+    </article>
+
+    <article class="film-card" data-type="pub">
+      <a href="projet.html?id=projet-3">
+        <div class="film-thumb">
+          <!--<img src="images/film-3.jpg" alt="Campagne automne">-->
+          <div class="film-thumb-ph"><div class="film-thumb-ph-bg film-thumb-ph-bg-c"></div></div>
+        </div>
+        <div class="film-info">
+          <div class="film-info-left">
+            <h2 class="film-info-title">Campagne automne</h2>
+            <p class="film-info-meta">2024 · 30 s + 15 s</p>
+          </div>
+          <span class="film-info-type">publicité</span>
+        </div>
+      </a>
+    </article>
+
+    <article class="film-card" data-type="fiction">
+      <a href="projet.html?id=projet-4">
+        <div class="film-thumb">
+          <!--<img src="images/film-4.jpg" alt="Le carrefour">-->
+          <div class="film-thumb-ph"><div class="film-thumb-ph-bg film-thumb-ph-bg-d"></div></div>
+        </div>
+        <div class="film-info">
+          <div class="film-info-left">
+            <h2 class="film-info-title">Le carrefour</h2>
+            <p class="film-info-meta">2024 · 22 min</p>
+          </div>
+          <span class="film-info-type">fiction narrative</span>
+        </div>
+      </a>
+    </article>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  <span class="footer-name">Nom Prénom — studio</span>
+  <span class="footer-right">contact@nomprenom.com</span>
+</footer>
+
+<script>
+function filterFilms(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.film-card').forEach(card => {
+    card.style.display = (type === 'tous' || card.dataset.type === type) ? '' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet — Nom Prénom Studio</title>
+  <meta name="description" content="Détail d'un projet : film, clip ou série photographique — équipe, matériel utilisé et galerie de tournage.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Projet — Nom Prénom Studio">
+  <meta property="og:description" content="Détail d'un projet : film, clip ou série photographique — équipe, matériel utilisé et galerie de tournage.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projet — Nom Prénom Studio">
+  <meta name="twitter:description" content="Détail d'un projet : film, clip ou série photographique.">
+  <!--
+    À ACTIVER une fois le nom de domaine définitif connu :
+    <link rel="canonical" href="https://votre-domaine.com/projet.html">
+    <meta property="og:url" content="https://votre-domaine.com/projet.html">
+    <meta property="og:image" content="https://votre-domaine.com/images/og-cover.jpg"> (1200×630px)
+  -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231C1714'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia, serif' fill='%23E9E3D9' text-anchor='middle'%3ENP%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@200;300;400&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-wordmark">
+    <a href="index.html">Nom Prénom<sup>studio</sup></a>
+  </div>
+  <div class="nav-links">
+    <a class="nav-link" href="films.html">films</a>
+    <a class="nav-link" href="photos.html">photos</a>
+    <a class="nav-link" href="contact.html">contact</a>
+  </div>
+  <div class="nav-status">disponible — sept. 2026</div>
+</nav>
+
+<main role="main" aria-label="Détail projet">
+
+  <div class="projet-header">
+    <div>
+      <a class="projet-back" href="films.html">retour aux films</a>
+      <h1 class="projet-title" id="projet-title">Chargement…</h1>
+      <p class="projet-tagline" id="projet-tagline"></p>
+    </div>
+    <div class="projet-specs" id="projet-specs"></div>
+  </div>
+
+  <div class="projet-hero-img">
+    <!--<img src="images/projet-hero.jpg" alt="">-->
+    <div class="projet-hero-ph">
+      <span class="projet-hero-ph-text">image principale — 2400×900px recommandé</span>
+    </div>
+  </div>
+
+  <div class="projet-body">
+    <div class="projet-text" id="projet-text">
+      <p>Le projet est né d'une contrainte : tout tourner dans une seule pièce, avec la lumière changeante d'une journée entière. Quatre heures de rush pour quatre minutes de film. La contrainte est devenue la matière même du clip — chaque plan porte l'heure à laquelle il a été fait.</p>
+      <p>La direction artistique a été construite à rebours : d'abord les stills, qui ont servi de storyboard vivant, puis la sélection des axes et des mouvements de caméra. Ce processus hybride — photo d'abord, film ensuite — donne au montage une texture particulière, proche de la série photographique.</p>
+      <p>La palette colorimétrique a été étalonnée en post-production pour suivre la courbe de la lumière naturelle : désaturée à l'aube, chaude et dense à midi, bleutée au crépuscule.</p>
+    </div>
+    <div class="projet-sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-heading">matériel utilisé</p>
+        <ul class="gear-list">
+          <li>Sony FX3</li>
+          <li>Sigma 35mm f/1.4 Art</li>
+          <li>Leica Summicron 50mm f/2</li>
+          <li>DJI RS3 Pro</li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">profil colorimétrique</p>
+        <p class="sidebar-text">S-Log3 · DaVinci Resolve<br>LUT maison + correction plan par plan</p>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">équipe</p>
+        <p class="sidebar-text">Réalisation, photo, montage :<br>Nom Prénom</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="projet-gallery">
+    <div class="gallery-header">
+      <h2 class="gallery-heading">Stills de tournage</h2>
+      <span class="gallery-count">4 images sélectionnées</span>
+    </div>
+    <div class="gallery-grid">
+      <!--
+        REMPLACER PAR VOS IMAGES :
+        <div class="gallery-grid-item"><img src="images/still-1.jpg" alt="Still 1"></div>
+      -->
+      <div class="gallery-grid-item"><div class="gallery-ph gallery-ph-a"></div></div>
+      <div class="gallery-grid-item"><div class="gallery-ph gallery-ph-b"></div></div>
+      <div class="gallery-grid-item"><div class="gallery-ph gallery-ph-c"></div></div>
+      <div class="gallery-grid-item"><div class="gallery-ph gallery-ph-d"></div></div>
+    </div>
+  </div>
+
+  <div class="projet-video">
+    <div class="video-embed-area" aria-label="Zone vidéo">
+      <div class="video-play-btn" aria-hidden="true"></div>
+      <!--
+        INTÉGRER VIMEO OU YOUTUBE :
+        <iframe src="https://player.vimeo.com/video/VOTRE_ID"
+                width="100%" height="100%"
+                frameborder="0" allowfullscreen
+                title="Titre du film"></iframe>
+      -->
+      <p>intégrer Vimeo ou YouTube ici</p>
+    </div>
+  </div>
+
+  <div class="projet-next">
+    <span class="projet-next-label">projet suivant</span>
+    <a class="projet-next-title" id="projet-next-link" href="#">—</a>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <span class="footer-name">Nom Prénom — studio</span>
+  <span class="footer-right">contact@nomprenom.com</span>
+</footer>
+
+<script>
+const projets = {
+  'projet-1': {
+    title:   'Les heures silencieuses',
+    tagline: 'Un clip, une chambre, quatre heures de lumière naturelle.',
+    specs: [
+      { label: 'type',   value: 'Clip officiel' },
+      { label: 'client', value: 'Artiste / Label' },
+      { label: 'année',  value: '2025' },
+      { label: 'durée',  value: '4 min 12 s' },
+    ],
+    next: { id: 'projet-2', title: 'Fragments du quotidien' }
+  },
+  'projet-2': {
+    title:   'Fragments du quotidien',
+    tagline: 'Dix-huit minutes dans les rues de Dakar à l\'heure bleue.',
+    specs: [
+      { label: 'type',   value: 'Court-métrage documentaire' },
+      { label: 'client', value: 'Production indépendante' },
+      { label: 'année',  value: '2025' },
+      { label: 'durée',  value: '18 min' },
+    ],
+    next: { id: 'projet-3', title: 'Campagne automne' }
+  },
+  'projet-3': {
+    title:   'Campagne automne',
+    tagline: 'Silence et texture pour une marque mode.',
+    specs: [
+      { label: 'type',   value: 'Publicité' },
+      { label: 'client', value: 'Marque à définir' },
+      { label: 'année',  value: '2024' },
+      { label: 'durée',  value: '30 s + 15 s' },
+    ],
+    next: { id: 'projet-4', title: 'Le carrefour' }
+  },
+  'projet-4': {
+    title:   'Le carrefour',
+    tagline: 'Fiction sur le choix et l\'immobilité.',
+    specs: [
+      { label: 'type',   value: 'Fiction narrative' },
+      { label: 'client', value: 'Production indépendante' },
+      { label: 'année',  value: '2024' },
+      { label: 'durée',  value: '22 min' },
+    ],
+    next: { id: 'projet-1', title: 'Les heures silencieuses' }
+  }
+};
+
+/* Lire l'id depuis l'URL : projet.html?id=projet-1 */
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id') || 'projet-1';
+const data = projets[id];
+
+if (data) {
+  document.title = data.title + ' — Nom Prénom Studio';
+  document.getElementById('projet-title').textContent   = data.title;
+  document.getElementById('projet-tagline').textContent = data.tagline;
+
+  document.getElementById('projet-specs').innerHTML = data.specs.map(s =>
+    `<div class="spec-item">
+      <p class="spec-label">${s.label}</p>
+      <p class="spec-value">${s.value}</p>
+    </div>`
+  ).join('');
+
+  if (data.next) {
+    const nextLink = document.getElementById('projet-next-link');
+    nextLink.textContent = data.next.title;
+    nextLink.href = 'projet.html?id=' + data.next.id;
+  }
+}
+</script>
+
+</body>
+</html>

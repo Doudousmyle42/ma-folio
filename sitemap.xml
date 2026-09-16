@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Gabarit à activer une fois le domaine définitif connu :
+  remplacer https://votre-domaine.com par l'URL réelle du site,
+  puis décommenter la balise Sitemap dans robots.txt.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://votre-domaine.com/index.html</loc></url>
+  <url><loc>https://votre-domaine.com/films.html</loc></url>
+  <url><loc>https://votre-domaine.com/photos.html</loc></url>
+  <url><loc>https://votre-domaine.com/contact.html</loc></url>
+  <url><loc>https://votre-domaine.com/projet.html?id=projet-1</loc></url>
+  <url><loc>https://votre-domaine.com/projet.html?id=projet-2</loc></url>
+  <url><loc>https://votre-domaine.com/projet.html?id=projet-3</loc></url>
+  <url><loc>https://votre-domaine.com/projet.html?id=projet-4</loc></url>
+</urlset>

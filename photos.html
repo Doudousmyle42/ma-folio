@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photos — Nom Prénom Studio</title>
+  <meta name="description" content="Séries photographiques — portraits, paysages, urbain.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Photos — Nom Prénom Studio">
+  <meta property="og:description" content="Séries photographiques — portraits, paysages, urbain.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Photos — Nom Prénom Studio">
+  <meta name="twitter:description" content="Séries photographiques — portraits, paysages, urbain.">
+  <!--
+    À ACTIVER une fois le nom de domaine définitif connu :
+    <link rel="canonical" href="https://votre-domaine.com/photos.html">
+    <meta property="og:url" content="https://votre-domaine.com/photos.html">
+    <meta property="og:image" content="https://votre-domaine.com/images/og-cover.jpg"> (1200×630px)
+  -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231C1714'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia, serif' fill='%23E9E3D9' text-anchor='middle'%3ENP%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@200;300;400&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-wordmark">
+    <a href="index.html">Nom Prénom<sup>studio</sup></a>
+  </div>
+  <div class="nav-links">
+    <a class="nav-link" href="films.html">films</a>
+    <a class="nav-link active" href="photos.html">photos</a>
+    <a class="nav-link" href="contact.html">contact</a>
+  </div>
+  <div class="nav-status">disponible — sept. 2026</div>
+</nav>
+
+<main role="main" aria-label="Photos">
+
+  <div class="photos-header">
+    <div>
+      <h1 class="photos-title">Photos</h1>
+    </div>
+    <div class="photos-series-nav">
+      <span class="series-nav-label">séries</span>
+      <div class="series-tabs" role="tablist">
+        <button class="series-tab active" role="tab" aria-selected="true"  onclick="switchSeries('toutes', this)">toutes</button>
+        <button class="series-tab"        role="tab" aria-selected="false" onclick="switchSeries('portrait', this)">portraits</button>
+        <button class="series-tab"        role="tab" aria-selected="false" onclick="switchSeries('paysage', this)">paysages</button>
+        <button class="series-tab"        role="tab" aria-selected="false" onclick="switchSeries('urbain', this)">urbain</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="photos-masonry" id="photos-masonry" role="list">
+    <!--
+      REMPLACER LES PLACEHOLDERS PAR VOS IMAGES :
+      <div class="photo-item" data-serie="portrait" role="listitem">
+        <img src="images/photo-nom.jpg" alt="Description">
+        <div class="photo-caption"><span class="photo-caption-text">Titre</span></div>
+      </div>
+    -->
+    <div class="photo-item" data-serie="portrait" role="listitem">
+      <div class="photo-ph photo-ph-a"></div>
+      <div class="photo-caption"><span class="photo-caption-text">Étude de lumière, Dakar</span></div>
+    </div>
+    <div class="photo-item" data-serie="urbain" role="listitem">
+      <div class="photo-ph photo-ph-b"></div>
+      <div class="photo-caption"><span class="photo-caption-text">Médina, aube</span></div>
+    </div>
+    <div class="photo-item" data-serie="paysage" role="listitem">
+      <div class="photo-ph photo-ph-c"></div>
+      <div class="photo-caption"><span class="photo-caption-text">Casamance, saison des pluies</span></div>
+    </div>
+    <div class="photo-item" data-serie="portrait" role="listitem">
+      <div class="photo-ph photo-ph-d"></div>
+      <div class="photo-caption"><span class="photo-caption-text">Sans titre, série Lumières</span></div>
+    </div>
+    <div class="photo-item" data-serie="urbain" role="listitem">
+      <div class="photo-ph photo-ph-e"></div>
+      <div class="photo-caption"><span class="photo-caption-text">Marché central, 6h00</span></div>
+    </div>
+    <div class="photo-item" data-serie="portrait" role="listitem">
+      <div class="photo-ph photo-ph-a" style="background:#1A1C19;"></div>
+      <div class="photo-caption"><span class="photo-caption-text">Portrait, lumière naturelle</span></div>
+    </div>
+    <div class="photo-item" data-serie="paysage" role="listitem">
+      <div class="photo-ph photo-ph-b" style="background:#171A17;"></div>
+      <div class="photo-caption"><span class="photo-caption-text">Sahel, fin de journée</span></div>
+    </div>
+    <div class="photo-item" data-serie="urbain" role="listitem">
+      <div class="photo-ph photo-ph-c" style="background:#1C1A17;"></div>
+      <div class="photo-caption"><span class="photo-caption-text">Plateau, rue des artistes</span></div>
+    </div>
+    <div class="photo-item" data-serie="portrait" role="listitem">
+      <div class="photo-ph photo-ph-d" style="background:#191C1A;"></div>
+      <div class="photo-caption"><span class="photo-caption-text">Série Mémoires, no. 7</span></div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <span class="footer-name">Nom Prénom — studio</span>
+  <span class="footer-right">contact@nomprenom.com</span>
+</footer>
+
+<script>
+function switchSeries(serie, btn) {
+  document.querySelectorAll('.series-tab').forEach(b => {
+    b.classList.remove('active');
+    b.setAttribute('aria-selected', 'false');
+  });
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected', 'true');
+  document.querySelectorAll('.photo-item').forEach(item => {
+    item.style.display = (serie === 'toutes' || item.dataset.serie === serie) ? '' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>

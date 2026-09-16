@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Nom Prénom Studio</title>
+  <meta name="description" content="Contactez-moi pour un projet, une collaboration ou une question.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Contact — Nom Prénom Studio">
+  <meta property="og:description" content="Contactez-moi pour un projet, une collaboration ou une question.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — Nom Prénom Studio">
+  <meta name="twitter:description" content="Contactez-moi pour un projet, une collaboration ou une question.">
+  <!--
+    À ACTIVER une fois le nom de domaine définitif connu :
+    <link rel="canonical" href="https://votre-domaine.com/contact.html">
+    <meta property="og:url" content="https://votre-domaine.com/contact.html">
+    <meta property="og:image" content="https://votre-domaine.com/images/og-cover.jpg"> (1200×630px)
+  -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231C1714'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia, serif' fill='%23E9E3D9' text-anchor='middle'%3ENP%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@200;300;400&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-wordmark">
+    <a href="index.html">Nom Prénom<sup>studio</sup></a>
+  </div>
+  <div class="nav-links">
+    <a class="nav-link" href="films.html">films</a>
+    <a class="nav-link" href="photos.html">photos</a>
+    <a class="nav-link active" href="contact.html">contact</a>
+  </div>
+  <div class="nav-status">disponible — sept. 2026</div>
+</nav>
+
+<main role="main" aria-label="Contact">
+
+  <div class="contact-header">
+    <h1 class="contact-title">Contact</h1>
+    <p class="contact-sub">Pour un projet, une collaboration ou une question.</p>
+  </div>
+
+  <div class="contact-body">
+    <div class="contact-infos">
+      <div class="contact-info-block">
+        <p class="contact-info-label">email</p>
+        <p class="contact-info-value">
+          <a href="mailto:contact@nomprenom.com">contact@nomprenom.com</a>
+        </p>
+      </div>
+      <div class="contact-info-block">
+        <p class="contact-info-label">téléphone</p>
+        <p class="contact-info-value">+221 XX XXX XX XX</p>
+      </div>
+      <div class="contact-info-block">
+        <p class="contact-info-label">basé à</p>
+        <p class="contact-info-value">
+          Dakar, Sénégal<br>
+          Déplacements France &amp; international
+        </p>
+      </div>
+      <div class="contact-info-block">
+        <p class="contact-info-label">réseaux</p>
+        <p class="contact-info-value">
+          <a href="https://instagram.com/VOTRE_COMPTE" target="_blank" rel="noopener">Instagram</a><br>
+          <a href="https://vimeo.com/VOTRE_COMPTE" target="_blank" rel="noopener">Vimeo</a>
+        </p>
+      </div>
+      <div class="contact-avail">
+        <p class="contact-avail-label">disponibilités</p>
+        <ul class="contact-avail-list">
+          <li><span class="avail-dot avail-dot-green"></span>Septembre 2026 — disponible</li>
+          <li><span class="avail-dot avail-dot-green"></span>Octobre 2026 — disponible</li>
+          <li><span class="avail-dot avail-dot-warm"></span>Novembre 2026 — partiel</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <div class="form-success" id="form-success" aria-live="polite">
+        Message reçu. Je reviendrai vers vous sous 48 heures.
+      </div>
+      <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-nom">nom</label>
+            <input class="form-input" type="text" id="f-nom" name="nom"
+                   placeholder="Votre nom" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-email">email</label>
+            <input class="form-input" type="email" id="f-email" name="email"
+                   placeholder="votre@email.com" required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="f-type">type de projet</label>
+          <select class="form-select" id="f-type" name="type">
+            <option value="" disabled selected>Choisir</option>
+            <option value="clip">Clip musical</option>
+            <option value="pub">Publicité / marque</option>
+            <option value="fiction">Fiction / court-métrage</option>
+            <option value="doc">Documentaire</option>
+            <option value="photo">Séance photo</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="f-message">message</label>
+          <textarea class="form-textarea" id="f-message" name="message"
+                    placeholder="Décrivez votre projet, vos dates, votre budget indicatif…"
+                    rows="5" required></textarea>
+        </div>
+        <p class="form-notice">Je réponds sous 48 h.</p>
+        <div class="form-submit-row">
+          <button type="submit" class="btn-ink">Envoyer le message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <span class="footer-name">Nom Prénom — studio</span>
+  <span class="footer-right">contact@nomprenom.com</span>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const nom     = document.getElementById('f-nom').value.trim();
+  const email   = document.getElementById('f-email').value.trim();
+  const message = document.getElementById('f-message').value.trim();
+
+  if (!nom || !email || !message) {
+    alert('Merci de remplir tous les champs obligatoires.');
+    return;
+  }
+
+  /*
+    ACTIVER L'ENVOI — exemple Formspree :
+    fetch('https://formspree.io/f/VOTRE_ID', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nom, email, message })
+    }).then(() => showSuccess());
+
+    Ou Netlify Forms : ajouter data-netlify="true" sur <form>.
+  */
+
+  showSuccess();
+}
+
+function showSuccess() {
+  document.getElementById('form-success').classList.add('visible');
+  document.getElementById('contact-form').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

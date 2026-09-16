@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# À activer une fois le site déployé sur son domaine définitif :
+# Sitemap: https://votre-domaine.com/sitemap.xml

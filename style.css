@@ -1,0 +1,183 @@
+/* Polices chargées via <link> dans le <head> de chaque page (l'ancien @import ici bloquait le rendu). */
+
+/* ─── Tokens ─── */
+:root {
+  --paper:      #E9E3D9;
+  --paper-dark: #D9D0C3;
+  --ink:        #1C1714;
+  --sepia:      #6B5546;
+  --warm-mid:   #C4B89A;
+  --forest:     #2E3B2C;
+
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+
+  --gap-sm:  12px;
+  --gap-md:  28px;
+  --gap-lg:  48px;
+  --pad-x:   40px;
+  --border:  1px solid var(--warm-mid);
+}
+
+/* ─── Reset ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea {
+  font-family: var(--sans);
+  font-size: inherit;
+}
+
+/* ─── Nav ─── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--paper);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 22px var(--pad-x) 18px;
+  border-bottom: var(--border);
+}
+.nav-wordmark {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1;
+  cursor: pointer;
+}
+.nav-wordmark sup {
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 200;
+  color: var(--sepia);
+  letter-spacing: 0.04em;
+  vertical-align: super;
+  margin-left: 3px;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: baseline;
+}
+.nav-link {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--sepia);
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.nav-link:hover,
+.nav-link.active { color: var(--ink); }
+.nav-status {
+  font-size: 11px;
+  font-weight: 200;
+  color: var(--forest);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.nav-status::before {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--forest);
+  flex-shrink: 0;
+}
+
+
+/* ─── Section borders ─── */
+.bordered-top { border-top: var(--border); }
+
+/* ─── Shared heading styles ─── */
+.serif-display {
+  font-family: var(--serif);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+}
+.serif-italic {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ─── Buttons ─── */
+.btn-ink {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--paper);
+  background: var(--ink);
+  padding: 11px 24px;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s;
+}
+.btn-ink:hover { opacity: 0.8; }
+.btn-ghost {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--sepia);
+  background: none;
+  border: none;
+  border-bottom: 0.5px solid var(--warm-mid);
+  padding-bottom: 2px;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--ink); }
+
+/* ─── Footer ─── */
+.footer {
+  border-top: var(--border);
+  padding: 22px var(--pad-x);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-name {
+  font-family: var(--serif);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--sepia);
+}
+.footer-right {
+  font-size: 10px;
+  font-weight: 200;
+  color: var(--sepia);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  :root { --pad-x: 20px; }
+  .nav-links { gap: 18px; }
+  .nav-status { display: none; }
+}
+@media (max-width: 560px) {
+  .nav-links { display: none; }
+  .nav-mobile-toggle { display: flex; }
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

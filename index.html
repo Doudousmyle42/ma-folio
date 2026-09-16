@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nom Prénom — Studio</title>
+  <meta name="description" content="Réalisateur, photographe et directeur de la photographie. Disponible pour projets cinéma, clip, publicité et séries photographiques.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Nom Prénom — Studio">
+  <meta property="og:description" content="Réalisateur, photographe et directeur de la photographie. Disponible pour projets cinéma, clip, publicité et séries photographiques.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nom Prénom — Studio">
+  <meta name="twitter:description" content="Réalisateur, photographe et directeur de la photographie.">
+  <!--
+    À ACTIVER une fois le nom de domaine définitif connu :
+    <link rel="canonical" href="https://votre-domaine.com/index.html">
+    <meta property="og:url" content="https://votre-domaine.com/index.html">
+    <meta property="og:image" content="https://votre-domaine.com/images/og-cover.jpg"> (1200×630px)
+  -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231C1714'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia, serif' fill='%23E9E3D9' text-anchor='middle'%3ENP%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@200;300;400&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-wordmark">
+    <a href="index.html">Nom Prénom<sup>studio</sup></a>
+  </div>
+  <div class="nav-links">
+    <a class="nav-link" href="films.html">films</a>
+    <a class="nav-link" href="photos.html">photos</a>
+    <a class="nav-link" href="contact.html">contact</a>
+  </div>
+  <div class="nav-status" aria-label="Statut de disponibilité">disponible — sept. 2026</div>
+</nav>
+
+
+<!-- ═══════════ PAGE : HOME ═══════════ -->
+<main id="page-home" role="main">
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Présentation">
+    <div class="hero-left">
+      <div>
+        <div class="hero-disciplines" role="list">
+          <div class="hero-discipline-item" role="listitem">Réalisateur</div>
+          <div class="hero-discipline-item" role="listitem">Photographe</div>
+          <div class="hero-discipline-item" role="listitem">Directeur de la photographie</div>
+        </div>
+        <h1 class="hero-h1">Ce que<br>l'œil <em>retient</em></h1>
+      </div>
+      <p class="hero-location">Dakar · Paris<br>disponible à l'international</p>
+    </div>
+    <a class="hero-right" href="films.html" aria-label="Voir les films">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <!--
+        REMPLACER PAR UNE IMAGE :
+        <img src="images/hero.jpg" alt="Projet récent" style="width:100%;height:100%;object-fit:cover;opacity:.85;">
+      -->
+      <div class="hero-placeholder" aria-hidden="true">
+        <div class="hero-placeholder-hint">image hero — 1600×900px</div>
+        <div>
+          <p class="hero-placeholder-tag">projet récent</p>
+          <p class="hero-placeholder-title">Titre du projet en vedette</p>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <!-- Projets en vedette -->
+  <section class="featured bordered-top" aria-label="Projets sélectionnés">
+    <div class="featured-cell">
+      <a class="featured-thumb" href="projet.html?id=projet-1" aria-label="Voir le projet 1">
+        <!--
+          REMPLACER PAR UNE IMAGE :
+          <img src="images/projet-1-thumb.jpg" alt="Fragments du quotidien">
+        -->
+        <div class="thumb-placeholder" aria-hidden="true">
+          <div class="thumb-placeholder-inner"></div>
+        </div>
+      </a>
+      <p class="featured-project-title">Fragments du quotidien</p>
+      <p class="featured-project-meta">Court-métrage documentaire · 2025</p>
+    </div>
+
+    <div class="featured-cell featured-cell-mid" aria-hidden="true">
+      <div class="featured-stat featured-stat-forest">
+        <span class="featured-stat-n">47</span>
+        <span class="featured-stat-label">projets réalisés</span>
+      </div>
+      <div class="featured-stat featured-stat-sepia">
+        <span class="featured-stat-n">12</span>
+        <span class="featured-stat-label">clients marques</span>
+      </div>
+    </div>
+
+    <div class="featured-cell" style="border-right:none;">
+      <a class="featured-thumb" href="projet.html?id=projet-2" aria-label="Voir le projet 2">
+        <!--
+          REMPLACER PAR UNE IMAGE :
+          <img src="images/projet-2-thumb.jpg" alt="Mémoires de surface">
+        -->
+        <div class="thumb-placeholder" aria-hidden="true" style="background:#2A2520;">
+          <div class="thumb-placeholder-inner"></div>
+        </div>
+      </a>
+      <p class="featured-project-title">Mémoires de surface</p>
+      <p class="featured-project-meta">Série photographique · 32 tirages · 2024</p>
+    </div>
+  </section>
+
+  <!-- Manifeste -->
+  <section class="manifesto bordered-top" aria-label="Approche artistique">
+    <div class="manifesto-left">
+      <span class="manifesto-label">approche</span>
+      <blockquote class="manifesto-quote">
+        L'image ne capte pas le monde — elle en choisit une version.
+      </blockquote>
+      <span class="manifesto-attr">sur la pratique</span>
+    </div>
+    <div class="manifesto-right">
+      <p class="manifesto-text">
+        Entre la photo et le film, il y a une frontière que je traverse délibérément. Ce qui intéresse — c'est l'instant où une lumière particulière révèle quelque chose d'habituellement invisible dans un visage, un espace, un mouvement. Chaque projet est traité comme un seul organisme : les stills nourrissent le montage, le montage redéfinit les prises de vue.
+      </p>
+      <div class="manifesto-ctas">
+        <a class="btn-ink" href="films.html">Voir tous les projets</a>
+        <a class="btn-ghost" href="contact.html">Discuter d'un projet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bande séries -->
+  <section class="series-band bordered-top" aria-label="Série en cours">
+    <div class="series-band-header">
+      <h2 class="series-band-title">Série en cours — Lumières de saison</h2>
+      <span class="series-band-count">8 images · argentique 35 mm</span>
+    </div>
+    <a class="series-strip" href="photos.html" role="button" tabindex="0" aria-label="Voir toutes les photos">
+      <!--
+        REMPLACER PAR DES IMAGES :
+        <div class="strip-item"><img src="images/serie-1.jpg" alt=""><span class="strip-label">lumière dorée</span></div>
+        etc.
+      -->
+      <div class="strip-item"><span class="strip-label">lumière dorée</span></div>
+      <div class="strip-item"><span class="strip-label">portrait</span></div>
+      <div class="strip-item"><span class="strip-label">paysage</span></div>
+      <div class="strip-item"><span class="strip-label">détail</span></div>
+      <div class="strip-item"><span class="strip-label">ambiance</span></div>
+    </a>
+  </section>
+
+  <footer class="footer">
+    <span class="footer-name">Nom Prénom — studio</span>
+    <span class="footer-right">contact@nomprenom.com</span>
+  </footer>
+</main>
+
+
+
+
+
+
+
+</body>
+</html>
