@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nom Prénom — Studio</title>
-  <meta name="description" content="Réalisateur, photographe et directeur de la photographie. Disponible pour projets cinéma, clip, publicité et séries photographiques.">
+  <meta name="description" content="Réalisateur, photographe et monteur vidéo. Disponible pour projets cinéma, clip, publicité et séries photographiques.">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Nom Prénom — Studio">
-  <meta property="og:description" content="Réalisateur, photographe et directeur de la photographie. Disponible pour projets cinéma, clip, publicité et séries photographiques.">
+  <meta property="og:description" content="Réalisateur, photographe et monteur vidéo. Disponible pour projets cinéma, clip, publicité et séries photographiques.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nom Prénom — Studio">
-  <meta name="twitter:description" content="Réalisateur, photographe et directeur de la photographie.">
+  <meta name="twitter:description" content="Réalisateur, photographe et monteur vidéo.">
   <!--
     À ACTIVER une fois le nom de domaine définitif connu :
     <link rel="canonical" href="https://votre-domaine.com/index.html">
@@ -56,7 +56,7 @@
         <div class="hero-disciplines" role="list">
           <div class="hero-discipline-item" role="listitem">Réalisateur</div>
           <div class="hero-discipline-item" role="listitem">Photographe</div>
-          <div class="hero-discipline-item" role="listitem">Directeur de la photographie</div>
+          <div class="hero-discipline-item" role="listitem">Monteur vidéo</div>
         </div>
         <h1 class="hero-h1">Ce que<br>l'œil <em>retient</em></h1>
       </div>
@@ -76,6 +76,28 @@
         </div>
       </div>
     </a>
+  </section>
+
+  <!-- Showreel : visible dès l'accueil, sans clic de navigation -->
+  <section class="reel bordered-top" id="showreel" aria-labelledby="reel-heading">
+    <div class="reel-header">
+      <div>
+        <span class="reel-label">showreel 2026</span>
+        <h2 class="reel-title" id="reel-heading">Une minute trente, l'essentiel</h2>
+      </div>
+      <div class="reel-tabs" role="tablist" aria-label="Choisir un showreel">
+        <button class="reel-tab active" role="tab" aria-selected="true" data-reel="realisation">réalisation</button>
+        <button class="reel-tab" role="tab" aria-selected="false" data-reel="montage">montage</button>
+      </div>
+    </div>
+    <div class="reel-player" id="reel-player">
+      <!-- Le lecteur Vimeo est injecté ici par le script dès qu'un ID est renseigné (voir REELS plus bas) -->
+      <div class="reel-ph" id="reel-ph">
+        <div class="reel-play" aria-hidden="true"></div>
+        <p class="reel-ph-text">showreel — ajoutez l'ID Vimeo dans le script</p>
+      </div>
+    </div>
+    <p class="reel-caption" id="reel-caption" aria-live="polite"></p>
   </section>
 
   <!-- Projets en vedette -->
@@ -165,6 +187,46 @@
     <span class="footer-right">contact@nomprenom.com</span>
   </footer>
 </main>
+
+<script>
+/* Showreels : renseigner l'ID Vimeo (le nombre à la fin de vimeo.com/123456789).
+   Conseils : 60–90 s, meilleurs plans d'abord, lisible sans le son, musique libre de droits. */
+const REELS = {
+  realisation: { vimeoId: '', caption: 'Réalisation · clips, publicités, documentaires — 1 min 30' },
+  montage:     { vimeoId: '', caption: 'Montage · rythme, narration, étalonnage — 1 min 15' }
+};
+
+function showReel(key) {
+  const reel = REELS[key];
+  const player = document.getElementById('reel-player');
+  const ph = document.getElementById('reel-ph');
+  document.getElementById('reel-caption').textContent = reel.caption;
+  player.querySelector('iframe')?.remove();
+  if (reel.vimeoId) {
+    const f = document.createElement('iframe');
+    f.src = 'https://player.vimeo.com/video/' + encodeURIComponent(reel.vimeoId) + '?title=0&byline=0&portrait=0&dnt=1';
+    f.title = 'Showreel ' + key;
+    f.allow = 'autoplay; fullscreen; picture-in-picture';
+    f.allowFullscreen = true;
+    f.loading = 'lazy';
+    player.appendChild(f);
+    ph.hidden = true;
+  } else {
+    ph.hidden = false;
+  }
+}
+
+document.querySelectorAll('.reel-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.reel-tab').forEach(b => {
+      b.classList.toggle('active', b === btn);
+      b.setAttribute('aria-selected', b === btn);
+    });
+    showReel(btn.dataset.reel);
+  });
+});
+showReel('realisation');
+</script>
 
 
 

@@ -56,6 +56,7 @@
       <button class="filter-btn" onclick="filterFilms('fiction', this)">fiction</button>
       <button class="filter-btn" onclick="filterFilms('pub', this)">publicité</button>
       <button class="filter-btn" onclick="filterFilms('doc', this)">documentaire</button>
+      <button class="filter-btn" onclick="filterFilms('montage', this)">montage</button>
     </div>
   </div>
 
@@ -70,7 +71,7 @@
         <div class="film-info">
           <div class="film-info-left">
             <h2 class="film-info-title">Les heures silencieuses</h2>
-            <p class="film-info-meta">2025 · 4 min 12 s</p>
+            <p class="film-info-meta">2025 · 4 min 12 s · Réalisation · montage</p>
           </div>
           <span class="film-info-type">clip officiel</span>
         </div>
@@ -86,7 +87,7 @@
         <div class="film-info">
           <div class="film-info-left">
             <h2 class="film-info-title">Fragments du quotidien</h2>
-            <p class="film-info-meta">2025 · 18 min</p>
+            <p class="film-info-meta">2025 · 18 min · Réalisation · image · montage</p>
           </div>
           <span class="film-info-type">court-métrage doc.</span>
         </div>
@@ -102,7 +103,7 @@
         <div class="film-info">
           <div class="film-info-left">
             <h2 class="film-info-title">Campagne automne</h2>
-            <p class="film-info-meta">2024 · 30 s + 15 s</p>
+            <p class="film-info-meta">2024 · 30 s + 15 s · Montage · étalonnage</p>
           </div>
           <span class="film-info-type">publicité</span>
         </div>
@@ -118,7 +119,7 @@
         <div class="film-info">
           <div class="film-info-left">
             <h2 class="film-info-title">Le carrefour</h2>
-            <p class="film-info-meta">2024 · 22 min</p>
+            <p class="film-info-meta">2024 · 22 min · Chef opérateur</p>
           </div>
           <span class="film-info-type">fiction narrative</span>
         </div>
@@ -139,7 +140,9 @@ function filterFilms(type, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.film-card').forEach(card => {
-    card.style.display = (type === 'tous' || card.dataset.type === type) ? '' : 'none';
+    const match = type === 'tous' || card.dataset.type === type
+      || (type === 'montage' && /montage/i.test(card.querySelector('.film-info-meta').textContent));
+    card.style.display = match ? '' : 'none';
   });
 }
 </script>
